@@ -1,0 +1,103 @@
+.icon-bar {
+  width: 100%; /* Full-width */
+  background-color: rgba(1, 1, 1, 0); /* Dark-grey background */
+  overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 0 5% 0 5%; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Add a hover color */
+}
+
+#logo-top-left{
+	position:fixed;
+	top:5%;
+	left:2%;
+  width:15%;
+}
+
+#connect-top-right{
+	position:fixed;
+	top:5%;
+  left:80%;
+  width:15%;
+}
+
+#centre-icon{
+  position: sticky;
+  justify-content: center;
+  width:60%;
+}
+
+.big-icon {
+  border: none;
+  text-decoration: none;
+  color: #fff !important;
+	display: block;
+	float: left;
+	clear: left;
+	margin: 2px 2px;
+	text-align: center;
+  background-color: rgba(0,0,0,0.0);
+  margin-bottom: -400px;
+
+}
+.big-icon img {
+  display: block;
+}
+.big-icon span {
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+	padding: 2px;
+  display: inline-block;
+	font-size: 10px;
+  top: -20px;
+  margin-bottom: -100px;
+}
+
+.number-of-nfts-minted {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  margin-top: -1px;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.number-minted {
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: "Ocraextended", sans-serif;
+  color: #fff;
+}
+
+.total-number-of-nfts {
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: "Ocraextended", sans-serif;
+  color: #fff;
+}
+
+.divider {
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #fff;
+  font-family: "Ocraextended", sans-serif;
+}
