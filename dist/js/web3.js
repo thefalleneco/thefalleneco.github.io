@@ -555,7 +555,7 @@ async function getEP() {
 
 
 //web3 mint from contract
-async function mintBBC() {
+async function mintFallen() {
   let contractAddress = '0xf9e393CbD7e8F34FB87127195f1F74E699D3d595'; //bbc_contract addy
 
   const web3 = new Web3(provider);
@@ -771,7 +771,7 @@ window.addEventListener('load', async () => {
   //document.querySelector("#MATIC").addEventListener("click", hitMATIC);
   //document.querySelector("#BSC").addEventListener("click", hitBNB);
   //document.querySelector("#OP").addEventListener("click", hitOP);
-  document.querySelector("#btn-mint").addEventListener("click", mintBBC);
+  document.querySelector("#btn-mint").addEventListener("click", mintFallen);
   //document.querySelector("#btn-buyNFT").addEventListener("click", spawnTinyDaemon);
   //document.querySelector("#btn-traverseNFT").addEventListener("click", traverseTinyDaemon);
   //document.querySelector("#btn-Donate").addEventListener("click", ramenIsOnTheMenu);
