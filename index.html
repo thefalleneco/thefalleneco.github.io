@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,132 +11,120 @@
     <link rel="stylesheet" href="dist/css/matrix.css">
     <link rel="stylesheet" href="dist/css/crt.css">
     <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
-</head>
-<body class="crt">
-  <canvas id="canvas">Canvas is not supported in your browser.</canvas>
-<canvas id="canvas2">Canvas is not supported in your browser.</canvas>
+  </head>
+  <body class="crt">
+    <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+    <canvas id="canvas2">Canvas is not supported in your browser.</canvas>
     <div class="body-wrap boxed-container">
-        <header class="site-header text-light">
-
-          <div id="logo-top-left"> <!--The Fallen Logo-->
-	        <img src="./images/fallen_logo.png">
-          </div>
-
-          <div id="connect-top-right"> <!--Connect btn-->
-            <div id="prepare">
-          <button id="btn-connect" class="big-icon">
-            <img src="./images/MMdark.png" alt="connect" />
-            <span><h6>CONNECT</h6></span>
-          </button>
+      <header class="site-header text-light">
+        <div id="logo-top-left"> <!--The Fallen Logo-->
+          <img src="./images/fallen_logo.png">
         </div>
-        <div id="connected" style="display: none">
-          <button id="btn-disconnect" class="big-icon">
-            <img src="./images/MMconnected.png" alt="connected" />
-            <span id="addWallet"><h6>DISCONNECT</h6></span>
-          </button>
-        </div>
-
+        <div id="connect-top-right"> <!--Connect btn-->
+          <div id="prepare">
+            <button id="btn-connect" class="big-icon">
+              <img src="./images/MMdark.png" alt="connect" />
+              <span><h6>CONNECT</h6></span>
+            </button>
           </div>
-
-
-
-            <div class="container">
-                <div class="site-header-inner">
-                    <div class="brand header-brand">
-                        <h1 class="m-0">
-                            <a href="index.html">
-                            </a>
-                        </h1>
-                    </div>
-                </div>
+          <div id="connected" style="display: none">
+            <button id="btn-disconnect" class="big-icon">
+              <img src="./images/MMconnected.png" alt="connected" />
+              <h6 id="addWallet">DISCONNECT</h6>
+            </button>
+          </div>
+        </div>
+        <div class="container">
+          <div class="site-header-inner">
+            <div class="brand header-brand">
+              <h1 class="m-0">
+                <a href="index.html">
+                </a>
+              </h1>
             </div>
-        </header>
-
-        <main>
-            <section class="hero text-center text-light">
-				<div class="hero-bg"></div>
-
-                <div class="container-sm">
-                    <div class="hero-inner">
-						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">The Fallen</h1>
-	                        <p class="hero-paragraph"><em>The Fallen</em> is an experimental project centered on evolutionary NFTs and an interactive token system. </p>
-
-                          <p class="hero-paragraph">It serves as a synthesis on both the origins and potentiality of human consciousness via multiple mediums of expression.</p>
-	                        <div class="hero-cta">
-							</div>
-              <div> <!-- mint machine -->
-                            <h2> <button id="btn-mint" class="button button-primary button-wide-mobile">
-                              MINT
-                            </button>
-                              <input type="number"
-                                     id="Nmint"
-                                     name="Nmint"
-                                     min="1"
-                                     max="10"
-                                     value="1">
-                            </h2>
-              <div class="number-of-nfts-minted">
-													<p class="number-minted" id="count">???</p>
-													<p class="divider">/</p>
-													<p class="total-number-of-nfts" id="total">1000</p>
-													</div>
-						</div>
-<div class="text-carousel">
-
-
-            <h3><span
-     class="txt-rotate"
-     data-period="1500"
-     data-rotate='["User, can you hear us?", "The Fallen is a legend about intelligence, about consciousness", "Via the minting process, the user individualizes Ghosts", "Individualized Ghosts allow the user to embody an Avatara", "By embodying Avatara, the user becomes one of the Fallen", "To be Fallen is to be a daemon in the machine"]'></span>
-</h3>
-</div>
-                    </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="hero text-center text-light">
+          <div class="hero-bg"></div>
+            <div class="container-sm">
+              <div class="hero-inner">
+                <div class="hero-copy">
+	          <h1 class="hero-title mt-0">The Fallen</h1>
+	          <p class="hero-paragraph"><em>The Fallen</em> is an experimental project centered on evolutionary NFTs and an interactive token system. </p>
+                  <p class="hero-paragraph">It serves as a synthesis on both the origins and potentiality of human consciousness via multiple mediums of expression.</p>
+                  <h2 id="clockText"></h2>
+                  <h3 id="demo"></h3>
+                  <div class="hero-cta">
                 </div>
-
-
-
-		<footer class="site-footer">
-			<div class="site-footer-top">
-				<section class="cta section text-light">
-					<div class="container-sm">
-						<div class="cta-inner section-inner">
-							<div class="cta-header text-center">
-								<h2 class="section-title mt-0">Descent</h2>
-								<p class="section-paragraph">The first descent was from grace, spirit to flesh. You began your voyage away from Eden, thinking you can become as God, only to become an alien in nature.</p>
-                <p class="section-paragraph">Now, you have chosen to fall once again. Your fleshly body excised from the intersection of time, space, and depth to descend once more into the <em>Eighth Sphere</em>, the metaverse, a 2D world of 0s & 1s.</p>
-
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-			<div class="site-footer-bottom">
-				<div class="container">
-					<div class="site-footer-inner">
-						<div class="brand footer-brand">
-              <div id='centre-icon'>
-								<img src="./images/fallen_logo.png" alt="Venus logo">
-							</div>
-						</div>
-
-
-            <div class='icon-bar'>
+                <div>
+                  <!-- mint machine -->
+                  <h2>
+                    <button id="btn-mint" class="button button-primary button-wide-mobile">
+                      <span id="buttonText">Button</span>
+                    </button>
+                    <input type="number"
+                           id="mintQuant"
+                           name="mintQuant"
+                           min="1"
+                           max="10"
+                           value="1"
+                           style="display: none">
+                  </h2>
+                  <div class="number-of-nfts-minted">
+                    <p class="number-minted" id="count">0000</p>
+                    <p class="divider">/</p>
+                    <p class="total-number-of-nfts" id="total">1000</p>
+                  </div>
+                  <div class="number-of-nfts-minted">
+                    <p class="number-minted" id="thePrice">X AVAX</p>
+                  </div>
+                </div>
+                <div class="text-carousel">
+                  <h3><span class="txt-rotate" data-period="1500" data-rotate='["User, can you hear us?", "The Fallen is a legend about intelligence, about consciousness", "Via the minting process, the user individualizes Ghosts", "Individualized Ghosts allow the user to embody an Avatara", "By embodying Avatara, the user becomes one of the Fallen", "To be Fallen is to be a daemon in the machine"]'></span></h3>
+                </div>
+              </div>
+            </div>
+            <footer class="site-footer">
+              <div class="site-footer-top">
+                <section class="cta section text-light">
+                  <div class="container-sm">
+                    <div class="cta-inner section-inner">
+                      <div class="cta-header text-center">
+                        <h2 class="section-title mt-0">Descent</h2>
+                        <p class="section-paragraph">The first descent was from grace, spirit to flesh. You began your voyage away from Eden, thinking you can become as God, only to become an alien in nature.</p>
+                        <p class="section-paragraph">Now, you have chosen to fall once again. Your fleshly body excised from the intersection of time, space, and depth to descend once more into the <em>Eighth Sphere</em>, the metaverse, a 2D world of 0s & 1s.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="site-footer-bottom">
+                <div class="container">
+                  <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+                      <div id='centre-icon'>
+                        <img src="./images/fallen_logo.png" alt="Venus logo">
+                      </div>
+                    </div>
+                    <div class='icon-bar'>
                       <a href='https://twitter.com/thefalleneco' target="_blank" rel="noreferrer noopener"><image src="images/twitter-white.png"></image></a>
                       <a href='https://discord.gg/ZqRJXza5Xk' target="_blank" rel="noreferrer noopener"><image src="images/discord-white.png"></image></a>
                       <a href='https://mirror.xyz/0x6af0059aD04167FcAE0fc20927c656dD9d92095b' target="_blank" rel="noreferrer noopener"><image src="images/mirror-white.png"</a>
                       <a href='https://joepegs.com/' target="_blank" rel="noreferrer noopener"><image src="images/Joepegs-white.png"></image></a>
                       <a href='https://opensea.io/' target="_blank" rel="noreferrer noopener"><image src="images/opensea-white.png"></image></a>
                     </div>
-						<div class="footer-copyright">
-              <p>
-
-              Forked with 🤍 by <a href="https://www.twitter.com/luciano_nft/" target="_blank" rel="noreferrer noopener">LuckyLuciano</a>
-           of <a href="https://www.bitdaemons.space/" target="_blank" rel="noreferrer noopener">BitDaemons</a> 👹</p></div>
-					</div>
-				</div>
-			</div>
-        </footer>
+                    <div class="footer-copyright">
+                      <p>Forked with 🤍 by <a href="https://www.twitter.com/luciano_nft/" target="_blank" rel="noreferrer noopener">LuckyLuciano</a> of <a href="https://www.bitdaemons.space/" target="_blank" rel="noreferrer noopener">BitDaemons</a> 👹 and Web3 by <a href="https://maxflowo2.com/">MaxFlowO&#8322;</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </section>
+      </main>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!--web3 imports-->
@@ -150,5 +138,5 @@
     <script src="dist/js/matrix.js"></script>
     <script src="dist/js/textcarousel.js"></script>
     <script src="dist/js/web3.js"></script>
-</body>
+  </body>
 </html>
