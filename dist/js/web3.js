@@ -162,7 +162,7 @@ async function fetchAccountData() {
   var dots ='…';
   var endString = selectedAccount.substring(selectedAccount.length - 5);
   var display = startString+dots+endString;
-  document.getElementById('addWallet').innerHTML = display;
+  document.getElementById('addWallet').innerHTML = '<h6>'+display+'</h6>';
 
   // capture allowed status
   await allowed();
