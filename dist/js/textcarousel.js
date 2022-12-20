@@ -1,4 +1,4 @@
-console.log{'carousel'};
+console.log('carousel start');
 
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
