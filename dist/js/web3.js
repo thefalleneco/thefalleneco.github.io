@@ -146,7 +146,6 @@ async function fetchAccountData() {
   document.getElementById('addWallet').innerHTML = '<h6>'+display+'</h6>';
 
   // capture allowed status
-  await allowed();
 
 }
 
@@ -188,8 +187,7 @@ async function onConnect() {
 
   // Shit to do on connection
   swapChain(43114, '0xA86A');
-  fetchAccountData();
-  allowed();
+  fetchAccountData().then(async () => { await allowed() });
 
   // Subscribe to accounts change
   provider.on('accountsChanged', (accounts) => {
@@ -292,12 +290,13 @@ async function fetchSaleTime() {
 async function allowed() {
   const web3 = new Web3(AVAX);
   let tokenContract = await new web3.eth.Contract(ABI, CA);
-  isAllowed = tokenContract.methods.myWhitelistStatus(selectedAccount).call();
+  isAllowed = await tokenContract.methods.myWhitelistStatus(selectedAccount).call();
   if (isAllowed) {
     buttonText = 'Mint';
   } else if (!isAllowed) {
     buttonText = 'Not Allowed';
   }
+  console.log('WL Status for',selectedAccount,'is',isAllowed);
 }
 
 // Update the count down every 1 second
@@ -427,7 +426,9 @@ async function mintFallen() {
   // set the variables via if/else if/else
   if (presaleStart > timeMeow) {
     console.log('Too soon junior', timeMeow, 'and WL mints start at', presaleStart);
-  } else if (saleStart > timeMeow && timeMeow >= presaleStart) {
+  } else if (saleStart > timeMeow && timeMeow >= presaleStart && !isAllowed) {
+    console.log('No presale for you',selectedAccount,'your status is',isAllowed);
+  } else if (saleStart > timeMeow && timeMeow >= presaleStart && isAllowed) {
     let value = await tokenContract
                         .methods
                         .minterPresaleFees()
@@ -442,7 +443,6 @@ async function mintFallen() {
                        .on(
                          'transactionHash',
                          function(hash) {
-                           //console.log(`https://testnet.bscscan.com/tx/${hash}`);
                            console.log(`https://snowtrace.io/tx/${hash}`);
                          }
                        );
@@ -466,7 +466,6 @@ async function mintFallen() {
                        .on(
                          'transactionHash',
                          function(hash) {
-                           //console.log(`https://testnet.bscscan.com/tx/${hash}`);
                            console.log(`https://snowtrace.io/tx/${hash}`);
                          }
                        );
