@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Fallen | Claims page</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="dist/css/iconbar.css">
+    <link rel="stylesheet" href="dist/css/matrix.css">
+    <link rel="stylesheet" href="dist/css/crt.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  </head>
+  <body class="crt">
+    <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+    <canvas id="canvas2">Canvas is not supported in your browser.</canvas>
+    <div class="body-wrap boxed-container">
+      <header class="site-header text-light">
+        <div id="logo-top-left"> <!--The Fallen Logo-->
+          <img src="./images/fallen_logo.png">
+        </div>
+        <div id="connect-top-right"> <!--Connect btn-->
+          <div id="prepare">
+            <button id="btn-connect" class="big-icon">
+              <img src="./images/MMdark.png" alt="connect" />
+              <span><h6>CONNECT</h6></span>
+            </button>
+          </div>
+          <div id="connected" style="display: none">
+            <button id="btn-disconnect" class="big-icon">
+              <img src="./images/MMconnected.png" alt="connected" />
+              <h6 id="addWallet">DISCONNECT</h6>
+            </button>
+          </div>
+        </div>
+        <div class="container">
+          <div class="site-header-inner">
+            <div class="brand header-brand">
+              <h1 class="m-0">
+                <a href="index.html">
+                </a>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="hero text-center text-light">
+          <div class="hero-bg"></div>
+            <div class="container-sm">
+              <div class="hero-inner">
+                <div class="hero-copy">
+	          <h1 class="hero-title mt-0">The Fallen | Claims</h1>
+	          <div class="hero-paragraph" id="minter" style="display: none">
+                     <h3 class="hero-title mt-0">0x0c822C07452a3E26FF96D23c64f49C335906D1e7</h3>
+                  </div>
+                  <div class="hero-paragraph" id="royalties" style="display: none">
+                     <h3 class="hero-title mt-0">TBD</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer class="site-footer">
+              <div class="site-footer-bottom">
+                <div class="container">
+                  <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+                      <div id='centre-icon'>
+                        <img src="./images/fallen_logo.png" alt="Venus logo">
+                      </div>
+                    </div>
+                    <div class='icon-bar'>
+                      <a href='https://twitter.com/thefalleneco' target="_blank" rel="noreferrer noopener"><image src="images/twitter-white.png"></image></a>
+                      <a href='https://discord.gg/ZqRJXza5Xk' target="_blank" rel="noreferrer noopener"><image src="images/discord-white.png"></image></a>
+                      <a href='https://the-fallen.gitbook.io/the-fallen-docs-litepaper/' target="_blank" rel="noreferrer noopener"><image src="images/gitbook-white.png"></image></a>
+                      <a href='https://mirror.xyz/0x6af0059aD04167FcAE0fc20927c656dD9d92095b' target="_blank" rel="noreferrer noopener"><image src="images/mirror-white.png"</a>
+                      <a href='https://joepegs.com/' target="_blank" rel="noreferrer noopener"><image src="images/Joepegs-white.png"></image></a>
+
+                    </div>
+                    <div class="footer-copyright">
+                      <p>Forked with 🤍 by <a href="https://www.twitter.com/luciano_nft/" target="_blank" rel="noreferrer noopener">LuckyLuciano</a> of <a href="https://www.bitdaemons.space/" target="_blank" rel="noreferrer noopener">BitDaemons</a> 👹 <br> Web3 by <a href="https://maxflowo2.com/">MaxFlowO&#8322;</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery.animateTyping.js"></script>
+    <!--web3 imports-->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3modal@1.9.0/dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fortmatic@2.0.6/dist/fortmatic.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--custom scripts-->
+    <script src="dist/js/matrix.js"></script>
+    <script src="dist/js/textcarousel.js"></script>
+    <script src="dist/js/claims.js"></script>
+  </body>
+</html>
