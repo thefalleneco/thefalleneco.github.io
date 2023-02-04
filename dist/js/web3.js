@@ -255,7 +255,7 @@ async function queryPresaleFees() {
   const web3 = new Web3(AVAX);
   let tokenContract = await new web3.eth.Contract(ABI, CA);
   let value = await tokenContract.methods.minterPresaleFees().call();
-  console.log(value, 'for presale');
+  //console.log(value, 'for presale');
   return value;
 }
 
@@ -264,7 +264,7 @@ async function queryFees() {
   const web3 = new Web3(AVAX);
   let tokenContract = await new web3.eth.Contract(ABI, CA);
   let value = await tokenContract.methods.minterFees().call();
-  console.log(value, 'for fees');
+  //console.log(value, 'for fees');
   return value;
 }
 
@@ -316,6 +316,8 @@ window.setInterval(async () => {
   var minutes;
   var seconds;
   var cost;
+
+  await setNumbers();
 
   // set the variables
   if (presaleStart > timeMeow) {
@@ -378,7 +380,7 @@ async function queryMinted() {
   const web3 = new Web3(AVAX);
   let tokenContract = await new web3.eth.Contract(ABI, CA);
   let value = await tokenContract.methods.minterMinted().call();
-  console.log(value, 'has been minted');
+  //console.log(value, 'has been minted');
   return value;
 }
 
@@ -387,7 +389,7 @@ async function queryAlloted() {
   const web3 = new Web3(AVAX);
   let tokenContract = await new web3.eth.Contract(ABI, CA);
   let value = await tokenContract.methods.minterCapacity().call();
-  console.log(value, 'to mint on this chain');
+  //console.log(value, 'to mint on this chain');
   return value;
 }
 
@@ -473,10 +475,13 @@ async function mintFallen() {
       gasPrice = result;
     });
 
+    let quant = document.getElementById("mintQuant").value;
+    console.log(quant);
+
     let mint = await tokenContract
                        .methods
-                       .publicMint(1)
-                       .send({ from: selectedAccount, gasPrice: gasPrice, value: value })
+                       .publicMint(quant)
+                       .send({ from: selectedAccount, gasPrice: gasPrice, value: value * quant })
                        .on(
                          'transactionHash',
                          function(hash) {
